@@ -1,0 +1,17 @@
+{
+    "name": "Slang::Othersixe",
+    "auth": "zef:elcaro",
+    "version":  "0.0.1",
+    "api": "1",
+    "description": "Slang to add 'otherwise' block to 'for' loops",
+    "tags": [ "Slang" ],
+    "authors": [ "zef:elcarlo" ],
+    "license": "Artistic-2.0",
+    "raku": "6.d",
+    "provides" : {
+        "Slang::Otherwise": "lib/Slang/Otherwise.rakumod"
+    },
+    "depends": [
+    ],
+    "source-url": "https://github.com/0racle/raku-Slang-Otherwise"
+}
