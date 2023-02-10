@@ -5,7 +5,7 @@
     "api": "1",
     "description": "Slang to add 'otherwise' block to 'for' loops",
     "tags": [ "Slang" ],
-    "authors": [ "zef:elcarlo" ],
+    "authors": [ "zef:elcaro" ],
     "license": "Artistic-2.0",
     "raku": "6.d",
     "provides" : {
