@@ -1,7 +1,7 @@
 {
     "name": "Slang::Otherwise",
     "auth": "zef:elcaro",
-    "version":  "0.0.1",
+    "version":  "0.0.2",
     "api": "1",
     "description": "Slang to add 'otherwise' block to 'for' loops",
     "tags": [ "Slang" ],
