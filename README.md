@@ -9,6 +9,8 @@ SYNOPSIS
 This slang adds syntax for an `otherwise` block that will run if the for loop is not entered.
 
 ```raku
+use Slang::Otherwise;
+
 for dir.grep(*.basename.contains: 'xyx') -> $f {
     say "Found $f"
 }
