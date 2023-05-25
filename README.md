@@ -24,7 +24,7 @@ CREDITS & NOTES
 
 This code is shamelessly taken from a [blog post by Damian Conway](https://blogs.perl.org/users/damian_conway/2019/09/itchscratch.html).
 
-Damian's slang called the block `else`, but the post spawned some discussion about whether that is a good name, also taking into consideration that Python's `for`/`else` does something entirely different. I recall someone suggested `otherwise`, which is a good a name as any.
+Damian's slang called the block `else`, but the post spawned some discussion about whether that is a good name, also taking into consideration that Python's `for`/`else` does something entirely different. In [commenting on the article](https://www.reddit.com/r/perl6/comments/d5u1mv/itchscratch_damian_conway/), several people suggested `otherwise`, which is a good a name as any.
 
 LICENCE
 =======
