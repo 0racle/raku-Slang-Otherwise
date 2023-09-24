@@ -1,0 +1,40 @@
+use v6.c;
+use Test;
+use Slang::Otherwise;
+
+plan 4;
+
+my @a;
+
+for @a {
+    flunk "Should not have flunked";
+}
+otherwise {
+    pass "executing the otherwise";
+}
+
+my $result := do for @a {
+    666
+}
+otherwise {
+    42
+}
+is-deeply $result, 42, 'Did the otherwise return the value';
+
+@a.push: 42;
+for @a {
+    is-deeply $_, 42, 'Did we run the loop';
+}
+otherwise {
+    flunk "Should not have flunked";
+}
+
+$result := do for @a {
+    $_
+}
+otherwise {
+    666;
+}
+is-deeply $result, (42,), 'Did the for loop return the value';
+
+# vim: ft=perl6 expandtab sw=4

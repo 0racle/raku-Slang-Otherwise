@@ -12,6 +12,7 @@
         "Slang::Otherwise": "lib/Slang/Otherwise.rakumod"
     },
     "depends": [
+      "Slangify:ver<0.0.2+>:auth<zef:lizmat>"
     ],
     "source-url": "https://github.com/0racle/raku-Slang-Otherwise"
 }
