@@ -1,12 +1,3 @@
-# Helper sub to do a HLL lookup in a NQP Match object
-my sub lookup(Mu \match, str $key) {
-    use nqp;
-    nqp::atkey(
-      nqp::findmethod(match,'hash')(match),
-      $key
-    ).?ast
-}
-
 my role Otherwise::Grammar {
     rule statement-control:sym<for> {
         <.block-for><.kok> {}
@@ -20,8 +11,8 @@ my role Otherwise::Grammar {
 }
 my role Otherwise::Actions {
     method statement-control:sym<for>(Mu $/) {
-        if lookup($/, 'otherwise') -> $otherwise {
-            callsame.replace-otherwise($otherwise);
+        if $<otherwise> -> $otherwise {
+            callsame.replace-otherwise($otherwise.ast);
         }
     }
 }
@@ -45,12 +36,12 @@ my role Otherwise::Grammar::Legacy {
 my role Otherwise::Actions::Legacy {
     method statement_control:sym<for>(Mu $/) {
         my $forloop := callsame;
-        if lookup($/, 'elseblock') -> $elseblock {
+        if $<elseblock> -> $elseblock {
             use QAST:from<NQP>;
             make QAST::Op.new: :op<unless>,
               $forloop,
               QAST::Op.new: :op<call>,
-                $elseblock;
+                $elseblock.ast;
         }
     }
 }
